@@ -1,0 +1,54 @@
+@import "00.vars";
+@import "01.card";
+@import "02.forms";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body, html {
+  display: block;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #928f8f;
+  font-family: $font-family;
+  font-size: 16px / $font-size * 1em;
+}
+
+html {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+button, input, textarea {
+  font-family: $font-family;
+  font-size: 16px / $font-size * 1em;
+}
+
+#__nuxt {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 100%;
+  width: 100%;
+  #__layout {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    width: 100%;
+  }
+}
+

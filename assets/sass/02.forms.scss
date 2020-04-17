@@ -1,0 +1,88 @@
+@import "00.vars";
+
+.input-label {
+  display: block;
+  width: 100%;
+  input {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    outline: none;
+    background: transparent;
+    font-family: $font-family;
+    font-size: 16px / $font-size * 1em;
+    color: #fff;
+    &::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.75);
+    }
+    &::-moz-placeholder {
+      color: rgba(255, 255, 255, 0.75);
+    }
+    &:-ms-input-placeholder {
+      color: rgba(255, 255, 255, 0.75);
+    }
+    &:-moz-placeholder {
+      color: rgba(255, 255, 255, 0.75);
+    }
+  }
+  .input-signature {
+    &:not(:last-child) {
+      margin-bottom: 5px / 8px * 1em
+    }
+  }
+  &.inline {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    input {
+      max-width: 55px / 16px * 1em
+    }
+    .input-signature {
+      max-width: 25px / 8px * 1em;
+      &:not(:last-child) {
+        margin-right: 5px / 8px * 1em;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.dark {
+    input {
+      color: #000;
+      &::-webkit-input-placeholder {
+        color: rgba(0, 0, 0, 0.75);
+      }
+      &::-moz-placeholder {
+        color: rgba(0, 0, 0, 0.75);
+      }
+      &:-ms-input-placeholder {
+        color: rgba(0, 0, 0, 0.75);
+      }
+      &:-moz-placeholder {
+        color: rgba(0, 0, 0, 0.75);
+      }
+    }
+    .input-signature {
+      color: #000;
+    }
+  }
+  &.error {
+    input {
+      color: #ff9191
+    }
+    .input-signature {
+      color: #ff9191
+    }
+  }
+}
+
+.input-signature {
+  display: block;
+  max-width: 100%;
+  font-size: 8px / $font-size * 1em;
+  line-height: 1.25em;
+  color: #fff;
+}

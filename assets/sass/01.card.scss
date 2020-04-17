@@ -1,0 +1,62 @@
+@import "00.vars";
+
+.card {
+  display: block;
+  width: 100%;
+  max-width: 358px / $font-size * 1em;
+  height: 214px / $font-size * 1em;
+  max-height: 214px / $font-size * 1em;
+  background-image: url(../images/card.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.card-top,
+.card-middle,
+.card-bottom {
+  display: block;
+  width: 100%;
+  height: (214px / 3) / $font-size * 1em;
+  padding: (10px / $font-size * 1em) (20px / $font-size * 1em);
+}
+.card-top {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 20px / $font-size * 1em
+}
+.card-like-btn {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0;
+  -webkit-appearance: none;
+  font-size: 16px / $font-size * 1em;
+  img {
+    display: block;
+    height: 20px / 16px * 1em;
+    width: 20px / 16px * 1em;
+    opacity: 0.5;
+    transition: opacity .2s linear;
+  }
+  &:hover,
+  &.active {
+    img {
+      opacity: 1;
+    }
+  }
+}
+.card-bottom {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
